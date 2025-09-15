@@ -21,38 +21,38 @@ def rectangle_move():
         clear_canvas_now()
         grass.draw_now(400, 30)
         character.draw_now(x,y)
-        y+=3
+        y+=10
         delay(0.01)
 
     while (x > 20):
         clear_canvas_now()
         grass.draw_now(400, 30)
         character.draw_now(x,y)
-        x-=3
+        x-=10
         delay(0.01)
 
     while (y > 90):
         clear_canvas_now()
         grass.draw_now(400, 30)
         character.draw_now(x,y)
-        y-=3
+        y-=10
         delay(0.01)
 
     while (x < 400):
          clear_canvas_now()
          grass.draw_now(400, 30)
          character.draw_now(x,y)
-         x+=3
+         x+=10
          delay(0.01)
 
 
 def circle_move():
     cx, cy = 400, 330
     r = 200
-    for degree in range(270, 270+360, 2):
+    for degree in range(270, 270+360, 5):
         theta = math.radians(degree)
         x = cx + r * math.cos(theta)
-        y = cy + r * math.sin(theta)
+        y = cy - r * math.sin(theta)
         clear_canvas_now()
         grass.draw_now(400, 30)
         character.draw_now(x, y)
